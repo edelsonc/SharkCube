@@ -6,12 +6,9 @@
 <p>This project is under the MIT License, so feel free to poke around the source code! The flask application is all in the sharkcube.py, while pycoil.py contains the physics related functions. CSS and images can be found in <code>static</code>, while HTML will be located in <code>templates</code>.</p>
 
 <h4>Prerequisities</h4>
-<p>To work with the code, the following is required: <pre>
-        <code>
-        python 3.5
-        virtualenv
-        </code>
-    </pre> </p>
+<p>To work with the code, the following is required: 
+<pre><code>python 3.5
+virtualenv</code></pre> </p>
 
 <h4>Installing</h4>
 <p>Once you have a working copy of <code>python 3.5</code> and <code>virtualenv</code> and have <a href=https://help.github.com/articles/cloning-a-repository/>cloned</a> a copy of <i>Shark<sup>3</sup></i>, you will need to create a new vitual environment.</p>
