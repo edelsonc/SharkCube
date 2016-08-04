@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>SharkCubed</title>
+    <meta name="description" content="8-Coil Array Operating Information">
+    <meta name="keywords" content="sharks helmholtz mangetoreception">
+    <link href="/static/css/main_style.css" rel=stylesheet>
+</head>
+<!--This is the introduction page to the Shark^3 project, which is an
+    intructional app on how to run the helmholtz apparatus at NCF-->
+
+<body>
+    <form action="/quit" method="post">
+        <input class="quit_button" type="submit" name="quit" value="Quit Application"></input>
+    </form>
+    <h1>Welcome to <i>Shark<sup>3</sup></i></h1>
+
+    <!--Table of contents-->
+    <h3>Table of Contents</h3>
+    <ul type="square">
+        <li><a href="#sec1">What is <i>Shark<sup>3</sup></i>?</a></li>
+        <li><a href="#sec2">What is the purpose of this page?</a></li>
+        <li><a href="#design"><i>Shark<sup>3</sup></i> Design</a>
+            <ul>
+                <li><a href="#design_frame">Frame</a></li>
+                <li><a href="#design_coils">Coils</a></li>
+            </ul>
+        </li>
+        <li><a href="#current_calc">Field Strength Calculator</a></li>
+        <li><a href="#contact">Questions?</a></li>
+    </ul>
+
+    <!--Main Section-->
+    <h3 id="sec1">What is <i>Shark<sup>3</sup></i>?</h3>
+    <p><i>Shark<sup>3</sup></i> is the 8 coil Helmholtz Array in the Pritzker Marine Laboratory at New College of Florida. It is used to <i>create</i> and <i>control</i> magnetic fields in the same range as the Earth's
+        <a href="https://en.wikipedia.org/wiki/Earth%27s_magnetic_field"> <i><b>Geomagnetic Field</b></i></a>, which is the field that surrounds our planet. These coils are used in behavioral experiments to maintain uniform magnetic fields in which potentially <a href="https://en.wikipedia.org/wiki/Magnetoreception"><i><b>
+    magnetosenitive</b></i></a> organisms can be observed. </p>
+
+    <img src="/static/images/coils.jpg" alt="SharkCubed setup" height="200px">
+
+    <p>The coil system was first setup in the January 2016, and served as the experimental apparatus in the thesis "Magnetosensory Abilities of the Whitespotted Bamboo Shark <i>Chiloscyllium plagiosum</i>".</p>
+
+    <h3 id="sec2">What is the purpose of this page?</h3>
+    <p>This pages serves as a reference for the set-up, operation, and calibration of <i>Shark<sup>3</sup></i>. It contains information about its design, experimental implementation, and field strength calculations.</p>
+
+    <h3 id="design"><i>Shark<sup>3</sup></i> Design</h3>
+    <p><i>Shark<sup>3</sup></i> was designed with cost and function in mind. The structure of the array is built from durable 1" pvc tubing, with 18 guage wiring used througout for coils.</p>
+
+<!--Frame information-->
+    <h5 id="design_frame">Frame</h5>
+    <p><i>Shark<sup>3</sup></i> is composed of 6 sides, with two unique layouts. The sides are all constructed of cut 1" pvc tubing, which were dry fitted together. The designs for the sides are given below.</p>
+    <img src="/static/images/sides.png" alt="Side Designs" width="500">
+    <p>Design (a) was used to constructed two oppositly positioned vertical sides, while design (b) was used for the remaining four.</p>
+
+<!--Coil design and schematics-->
+    <h5 id="design_coils">Coils</h5>
+    <p>The coils consists of 10 wraps of insulated solid copper 18 gauge wire. Each set of coils is controlled by a seperate powersupply. The schematic for the sstem is shown below.</p>
+    
+    <img src="/static/images/Coil_connect.png" alt="Coil Schematic" width="500">
+
+    <!--Current Strength calculator for magnetic coil-->
+    <h3 id=current_calc>Field Strength Calculator</h3>
+    <p>The magnetic field strength depends on the height of the coils, the number of wraps, and the current. While the former two are constants of the setup, the last one can be changed using the independent power supplies.This allows the angle of inclination and the magnetitude of the field in the box to be altered. But what current do you need?</p>
+    
+    <p>Below you will find a box that you can enter the desired magnetic field strengh (in Gauss). When you submit, you'll be redirected to a second page containing the required currents for the inside and outside coil sets, as well as a graphs of the theoretical field strength along the central axis:</p>
+    
+    <form action="/field_calc" method="post">
+            <input id=calc  type="text" name="field"></input>
+            <input id=calc  type="submit" value="Calculate"></input>
+    </form>
+    
+    <p>Don't know what field strenght you need? Check out the <a href="http://www.ngdc.noaa.gov/geomag-web/#igrfwmm">NOAA page for information on local magnetic fields</a>. By entering your zipcode (34243 for Sarasota) you can find the local field magnetitude and angle of inclination. Don't forget to solve for each component!</p>
+
+    <!--Contact information-->
+    <h3 id="contact">Questions?</h4>
+    <p>If you have any questions, comments, or concerns about the design and operation of <i>Shark<sup>3</sup></i>, or about any information on this page, please contact me via <a href="mailto:Charles.Edelson12@ncf.edu?subject=SharkCubed" title="Charles.Edelson12@ncf.edu">my email.</a></p>
+</body>
+
+</html>

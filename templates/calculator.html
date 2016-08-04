@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Magnetic Field Strenght Calculator</title>
+    <meta name=keywords content="magnetic field strength current">
+    <link href="/static/css/main_style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="/quit" method="post">
+        <input class="quit_button" type="submit" name='quit' value="Quit Application"></input>
+    </form>
+    <h1>Current Calculator</h1>
+    <table>
+        <tr>
+            <td width="50%"><div id=calc_result>
+            <p>For a magnetic field strength of {{ field }} Gauss:</p>
+            <ul type=none>
+                <li>Inner Coil: {{ inner_current }} Amp</li>
+                <li>Outer Coil: {{ current }} Amp</li>
+            </ul>
+            </div></td>
+            <td width="50%"><img src="/static/images/temp_coil.png" alt="Central Field" height="450px"></td>
+        </tr>
+    </table>
+
+    <a id="return_home" href="./">Return to Homepage</a>
+</body>
+
+</html>
