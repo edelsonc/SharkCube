@@ -8,14 +8,14 @@ This project is under the MIT License, so feel free to poke around the source co
 
 <h3>Prerequisities</h3>
 
-<pre><code>
+<<code>
 python 3.5
 flask
 matplotlib
 numpy
 scipy
 pyinstaller
-</code></pre>
+</code>
 
 <i>Note:</i> <u>Although I would typically recommend <a href=https://www.continuum.io/why-anaconda>Anaconda from Continuum Analytics</a> for most python related purposes, pyinstaller requires a full python framework</u>
 
