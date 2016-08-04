@@ -15,19 +15,19 @@ virtualenv</code></pre> </p>
 
 <p>Using the terminal, navigate to the new <code>SharkCube</code> directory and create a new vitual environtment</p>
 
-<code>$ virtualenv name_of_your_new_venv</code>
+<p><code>$ virtualenv name_of_your_new_venv</code></p>
 
 <p>replacing <code>name_of_your_new_venv</code> with a name of your choise (I like <code>venv_shark</code></p>
 
 <p>Now you can activate you new virtual environment with</p>
 
-<code>$ source name_of_your_new_venv/bin/activate</code>.
+<p><code>$ source name_of_your_new_venv/bin/activate</code>.</p>
 
 <p>The name of your new virtual environment should now be diplayed to the left of the command prompt, like <code>(name_of_your_new_venv) $</code>.</p>
 
 <p>All that's left to do is install the appropriate packages. This is done using pip and the <code>requirements.txt</code> as follows:</p>
 
-<code>pip install -r requirement.txt</code>.
+<p><code>pip install -r requirement.txt</code>.</p>
 
 <p>Now you're ready to go! Begin messing around as you please :)</p>
 
