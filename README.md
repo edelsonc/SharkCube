@@ -17,15 +17,11 @@ virtualenv</code></pre> </p>
 
 <p><code>$ virtualenv name_of_your_new_venv</code></p>
 
-<p>replacing <code>name_of_your_new_venv</code> with a name of your choise (I like <code>venv_shark</code></p>
-
-<p>Now you can activate you new virtual environment with</p>
+<p>replacing <code>name_of_your_new_venv</code> with a name of your choise (I like <code>venv_shark).</code>. Now you can activate you new virtual environment with</p>
 
 <p><code>$ source name_of_your_new_venv/bin/activate</code>.</p>
 
-<p>The name of your new virtual environment should now be diplayed to the left of the command prompt, like <code>(name_of_your_new_venv) $</code>.</p>
-
-<p>All that's left to do is install the appropriate packages. This is done using pip and the <code>requirements.txt</code> as follows:</p>
+<p>The name of your new virtual environment should now be diplayed to the left of the command prompt, like <code>(name_of_your_new_venv) $</code>. All that's left to do is install the appropriate packages. This is done using pip and the <code>requirements.txt</code> as follows:</p>
 
 <p><code>pip install -r requirement.txt</code>.</p>
 
@@ -39,4 +35,4 @@ virtualenv</code></pre> </p>
     </ul>
 </p>
 <h2>License</h2>
-<p>This project is licensed under the MIT License - se the <code>LICENSE.txt</code> file for detail</p>
+<p>This project is licensed under the MIT License - see the <code>LICENSE.txt</code> file for detail</p>
