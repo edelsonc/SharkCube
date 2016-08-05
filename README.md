@@ -37,7 +37,20 @@ virtualenv</code></pre> </p>
 
 <p>Alternativly, you can create an independent executable and .app using</p>
 
-<p><code>$ frameworkpyinstaller sharkcube.py</code>.</p>
+<p><code>$ frameworkpyinstaller sharkcube.spec</code>.</p>
+
+<h4>Installing: Option 2</h4>
+<p>If the above sounded overly complicated to you, there is an alternative. After cloning the repository, instead of setting up a virtual environment, you simply run</p>
+
+<p><code>$ pip install -r requirements.txt</code></p>
+
+<p>to install all of the dependencies into your normal python. You can then directly run the application with</p>
+
+<p><code>$ python3 sharkcube.py</code></p>
+
+<p>or create an application with</p>
+
+<p><code>$ pyinstaller sharkcube.spec</code>.</p>
 
 <p><i>Note:</i> Although I would typically recommend <a href=https://www.continuum.io/why-anaconda>Anaconda from Continuum Analytics</a> for most python related purposes, pyinstaller requires a full python framework</p>
 <h2>Authors</h2>
