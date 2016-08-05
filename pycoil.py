@@ -52,7 +52,13 @@ class SquareCoil(object):
 
 def root_secant(f, a, b, tolerance=1.0e-6):
     """Uses the Secant method to find a value of x that is a solution near the
-    initial guesses
+    initial guesses. Function is used as follows:
+    
+    def f(x):
+        return x**2 - 1
+        
+    print(root_secant(f, 0, 1))  # returns 1
+    print(root_secant(f, 0, -1)  # returns -1
 
     Argument
     --------
@@ -63,8 +69,9 @@ def root_secant(f, a, b, tolerance=1.0e-6):
     dx = abs(b-a)
     i = 0
     while dx > tolerance:
-        m = (f(b) - f(a)) / (b - a)  # slope of the line
-        x_zero = b - f(b)/m  # x intercept of line
+        # caclulating the slope in order to find the x_intercept (x_zero)
+        m = (f(b) - f(a)) / (b - a)
+        x_zero = b - f(b)/m
 
         # find if a of b is closer to intercept
         if abs(b - x_zero) < abs(a - x_zero):
@@ -101,13 +108,14 @@ def calculate_current(B):
     return I, I*0.423514
 
 
-def plot_central_field(I):
+def plot_central_field(I, static):
     """Plots the magnetic field along the central axis of the square four coil
     helmholtz array.
 
     Argument
     --------
     I -- current in Amps
+    static -- location of the static file for flask
     """
     N = 100  # number of points in each dimension
     z_start, z_end = -1.8, 3.6  # dimensions of array in meters
@@ -149,7 +157,6 @@ def plot_central_field(I):
     pyplot.legend(loc=0)
     
     # save the figure
-    static = os.path.join(sys._MEIPASS, 'static')
     pyplot.savefig('{}/images/temp_coil.png'.format(static))
 
     return None
