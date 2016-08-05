@@ -9,6 +9,7 @@ import sys
 import os
 import math
 import numpy
+import tempfile
 from scipy.constants import mu_0
 from matplotlib import pyplot
 
@@ -156,7 +157,17 @@ def plot_central_field(I, static):
     pyplot.axvline(x=coil_pos[3], color='k', linestyle='--')
     pyplot.legend(loc=0)
     
-    # save the figure
-    pyplot.savefig('{}/images/temp_coil.png'.format(static))
+    # in order for flask to display the correct image, a temporary image is
+    # created using the tempfile library
+    f = tempfile.NamedTemporaryFile(
+        dir="{}/images".format(static),
+        suffix='png', delete=False)
+        
+    # save the figure and find it's name to be used for rendering 
+    pyplot.savefig(f)
+    f.close()
+    plotPng = f.name.split('/')[-1]
 
-    return None
+    return plotPng
+
+    

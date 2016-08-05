@@ -11,7 +11,6 @@ import pycoil
 import jinja2.ext
 from flask import Flask, render_template, request, redirect
 
-
 # checks if the file is running as an app or in normal Python and directs flask
 # to the correct templates and static files
 if getattr(sys, 'frozen', False):
@@ -45,9 +44,9 @@ def field_calc():
     """
     B_field = float(request.form['field'])
     I, I_in = pycoil.calculate_current(B_field*10**-4)
-    pycoil.plot_central_field(I, static)
+    fig = pycoil.plot_central_field(I, static)
     return render_template('calculator.html', field=B_field,
-        current=round(I,2), inner_current=round(I_in, 2))
+        current=round(I,2), inner_current=round(I_in, 2), temp=fig)
 
 
 @app.route('/quit', methods=['POST'])
@@ -72,9 +71,3 @@ if __name__ == "__main__":
     url = 'http://127.0.0.1:5000'
     webbrowser.open(url)
     app.run()
-
-data = [
-    ('./templates/', './templates'),
-    ('pycoil.py', '.'),
-    ('./static/', './static')
-    ]
