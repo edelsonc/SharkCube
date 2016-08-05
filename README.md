@@ -2,7 +2,7 @@
 <p>Shark<sup>3</sup> is a mac application that runs a local flask web application. It provides basic information about the 8 coil Helmholtz array located in the New College of Florida Pritzker Marine Lab. Additionally, it has a current calculator, which calculates the required current needed in the coils of the array in order to create a local magnetic field of a designed strength. The purpose of <i>Shark<sup>3</sup></i> is to easily allow Marine Biology students at New College of Florida to calculate the current they'd need to create magnetic field for behavioral experiments, as well as provide information about the design of <i>Shark<sup>3</sup></i>.</p>
 
 <h2>Getting Started</h2>
-<p><i>Shark<sup>3</sup></i> can be run as either the plan web application, or the sharkcube.spec can be used with pyinstaller to create a standalone applications.</p>
+<p><i>Shark<sup>3</sup></i> can be run as either the web application, or the sharkcube.spec can be used with pyinstaller to create a standalone applications.</p>
 
 <h4>Prerequisities</h4>
 <p>To work with the code, the following is required: 
